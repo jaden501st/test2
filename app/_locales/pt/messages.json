@@ -77,7 +77,8 @@
     "message": "Decimais devem ser no mínimo 0 e não passar de 36."
   },
   "defaultNetwork": {
-    "message": "A rede pré definida para transações em Ether é a Mainnet."
+    "message": "A rede pré definida para transações em Ether é a Mainnet.",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "depositEther": {
     "message": "Depositar Ether"

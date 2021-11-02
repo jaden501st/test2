@@ -276,7 +276,8 @@
     "message": "小數點後位數至少為0, 最多為36."
   },
   "defaultNetwork": {
-    "message": "預設以太幣交易網路為主網路"
+    "message": "預設以太幣交易網路為主網路",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "delete": {
     "message": "刪除"

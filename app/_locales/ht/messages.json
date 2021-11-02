@@ -146,7 +146,8 @@
     "message": "Desimal yo dwe omwen 0, epi pa dwe plis pase 36."
   },
   "defaultNetwork": {
-    "message": "Dfo rezo a pou tranzaksyon Ether se Mainnet."
+    "message": "Dfo rezo a pou tranzaksyon Ether se Mainnet.",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "depositEther": {
     "message": "Depo Ether"

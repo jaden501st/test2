@@ -428,7 +428,8 @@
     "message": "I-decrypt ang request"
   },
   "defaultNetwork": {
-    "message": "Ang default na network para sa mga transaksyon ng Ether ay ang Mainnet."
+    "message": "Ang default na network para sa mga transaksyon ng Ether ay ang Mainnet.",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "delete": {
     "message": "I-delete"

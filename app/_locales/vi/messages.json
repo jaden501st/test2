@@ -506,7 +506,8 @@
     "message": "Yêu cầu của Decrypt"
   },
   "defaultNetwork": {
-    "message": "Mạng mặc định cho các giao dịch Ether là Mạng chính thức."
+    "message": "Mạng mặc định cho các giao dịch Ether là Mạng chính thức.",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "delete": {
     "message": "Xóa"

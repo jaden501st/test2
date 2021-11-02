@@ -267,7 +267,8 @@
     "message": "Liczb po przecinku musi być co najmniej 0 i nie więcej niż 36."
   },
   "defaultNetwork": {
-    "message": "Domyślna sieć dla Eteru to Mainnet."
+    "message": "Domyślna sieć dla Eteru to Mainnet.",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "delete": {
     "message": "Usuń"

@@ -74,7 +74,8 @@
     "message": "Decimalen moeten minimaal 0 en niet meer dan 36 zijn."
   },
   "defaultNetwork": {
-    "message": "Het standaardnetwerk voor Ether-transacties is Mainnet."
+    "message": "Het standaardnetwerk voor Ether-transacties is Mainnet.",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "depositEther": {
     "message": "Stort Ether"

@@ -506,7 +506,8 @@
     "message": "요청 암호 해독"
   },
   "defaultNetwork": {
-    "message": "Ether 거래의 기본 네트워크는 메인 넷입니다."
+    "message": "Ether 거래의 기본 네트워크는 메인 넷입니다.",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "delete": {
     "message": "삭제"

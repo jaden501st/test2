@@ -264,7 +264,8 @@
     "message": "Els decimals han de ser al menys 0, i no més de 36."
   },
   "defaultNetwork": {
-    "message": "La xarxa per defecte per a les transaccions Ether és Mainnet."
+    "message": "La xarxa per defecte per a les transaccions Ether és Mainnet.",
+    "description": "$1 is the 'enable' or 'disable' key, depending on whether the display of test networks is enabled or not. $2 is a clickable link with text defined by the 'here' key. The link will open to the advanced settings where users can enable the display of test networks in the network dropdown."
   },
   "delete": {
     "message": "Suprimeix"
