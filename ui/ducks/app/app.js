@@ -50,7 +50,7 @@ export default function reduceApp(state = {}, action) {
     gasLoadingAnimationIsShowing: false,
     ledgerWebHidConnectedStatus: WEBHID_CONNECTED_STATUSES.UNKNOWN,
     newNetworkAdded: '',
-    failedTransactionsToDisplay: {},
+    transactionsToDisplayOnFailure: {},
     ...state,
   };
 
@@ -345,17 +345,17 @@ export default function reduceApp(state = {}, action) {
     case actionConstants.ADD_TXS_TO_FAILED_TXES_TO_DISPLAY:
       return {
         ...appState,
-        failedTransactionsToDisplay: {
-          ...appState.failedTransactionsToDisplay,
+        transactionsToDisplayOnFailure: {
+          ...appState.transactionsToDisplayOnFailure,
           [action.value]: true,
         },
       };
 
     case actionConstants.REMOVE_TX_TO_FAILED_TXES_TO_DISPLAY:
-      delete appState.failedTransactionsToDisplay[action.value];
+      delete appState.transactionsToDisplayOnFailure[action.value];
       return {
         ...appState,
-        failedTransactionsToDisplay: appState.failedTransactionsToDisplay,
+        transactionsToDisplayOnFailure: appState.transactionsToDisplayOnFailure,
       };
 
     case actionConstants.SET_WEBHID_CONNECTED_STATUS:
