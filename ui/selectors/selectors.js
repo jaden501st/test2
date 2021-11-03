@@ -669,3 +669,12 @@ export function doesAddressRequireLedgerHidConnection(state, address) {
 export function getNewNetworkAdded(state) {
   return state.appState.newNetworkAdded;
 }
+
+/**
+ *  To get the useAdvancedGasFee flag to determine if teh advanced/custom gas fee has to be used as default values.
+ *  @param {*} state
+ *  @returns Boolean
+ */
+export function getUseAdvancedGasFee(state) {
+  return Boolean(state.metamask.useAdvancedGasFee);
+}
