@@ -5,6 +5,7 @@ import { ethers } from 'ethers';
 import log from 'loglevel';
 import { NETWORK_TYPE_TO_ID_MAP } from '../../../shared/constants/network';
 import { isPrefixedFormattedHexString } from '../../../shared/modules/network.utils';
+import { LEDGER_TRANSPORT_TYPES } from '../../../shared/constants/hardware-wallets';
 import { NETWORK_EVENTS } from './network';
 
 export default class PreferencesController {
@@ -36,6 +37,7 @@ export default class PreferencesController {
       // set to true means the dynamic list from the API is being used
       // set to false will be using the static list from contract-metadata
       useTokenDetection: false,
+      useAdvancedGasFee: false,
 
       // WARNING: Do not use feature flags for security-sensitive things.
       // Feature flag toggling is available in the global namespace
@@ -52,13 +54,16 @@ export default class PreferencesController {
       preferences: {
         autoLockTimeLimit: undefined,
         showFiatInTestnets: false,
+        showTestNetworks: false,
         useNativeCurrencyAsPrimaryCurrency: true,
         hideZeroBalanceTokens: false,
       },
       // ENS decentralized website resolution
       ipfsGateway: 'dweb.link',
       infuraBlocked: null,
-      useLedgerLive: false,
+      ledgerTransportType: window.navigator.hid
+        ? LEDGER_TRANSPORT_TYPES.WEBHID
+        : LEDGER_TRANSPORT_TYPES.U2F,
       ...opts.initState,
     };
 
@@ -123,6 +128,16 @@ export default class PreferencesController {
    */
   setUseTokenDetection(val) {
     this.store.updateState({ useTokenDetection: val });
+  }
+
+  /**
+   * Setter for the `useAdvancedGasFee` property
+   *
+   * @param {boolean} val - Whether or not the user prefers to use the static token list or dynamic token list from the API
+   *
+   */
+  setUseAdvancedGasFee(val) {
+    this.store.updateState({ useAdvancedGasFee: val });
   }
 
   /**
@@ -516,21 +531,21 @@ export default class PreferencesController {
   }
 
   /**
-   * A setter for the `useLedgerLive` property
-   * @param {bool} useLedgerLive - Value for ledger live support
-   * @returns {Promise<string>} A promise of the update to useLedgerLive
+   * A setter for the `useWebHid` property
+   * @param {string} ledgerTransportType - Either 'ledgerLive', 'webhid' or 'u2f'
+   * @returns {string} The transport type that was set.
    */
-  async setLedgerLivePreference(useLedgerLive) {
-    this.store.updateState({ useLedgerLive });
-    return useLedgerLive;
+  setLedgerTransportPreference(ledgerTransportType) {
+    this.store.updateState({ ledgerTransportType });
+    return ledgerTransportType;
   }
 
   /**
-   * A getter for the `useLedgerLive` property
-   * @returns {boolean} User preference of using Ledger Live
+   * A getter for the `ledgerTransportType` property
+   * @returns {boolean} User preference of using WebHid to connect Ledger
    */
-  getLedgerLivePreference() {
-    return this.store.getState().useLedgerLive;
+  getLedgerTransportPreference() {
+    return this.store.getState().ledgerTransportType;
   }
 
   /**
